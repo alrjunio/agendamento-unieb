@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Agendar triagem | UNIEB Brazlândia</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-flex">
+            <div class="brand-mark" aria-hidden="true">DF</div>
+            <div>
+                <div class="brand-eyebrow">SECRETARIA DE ESTADO DE EDUCAÇÃO DO DF</div>
+                <div class="brand-name">CRE Brazlândia <span>· UNIEB</span></div>
+            </div>
+        </div>
+    </header>
+    <main class="container main-grid">
+        <section class="intro"><span class="tag">CRE Brazlândia · UNIEB</span>
+            <h1>Agendamento de <em>triagem</em> para estratégia de matrícula 2026</h1>
+            <p>Escolha uma data, selecione um horário livre e informe os nomes do responsável e do estudante.</p>
+            <div class="info-panel">
+                <div class="info-icon">✓</div>
+                <div><strong>Agendamento gratuito e simples</strong>
+                    <p>Você receberá a confirmação na tela. Anote ou tire uma captura de tela para guardar os dados.</p>
+                </div>
+            </div>
+            <div class="step-pills"><span><b>1</b> Data</span><span><b>2</b> Horário</span><span><b>3</b> Dados</span>
+            </div>
+        </section>
+        <section class="card booking-card" aria-labelledby="booking-title">
+            <div class="card-title">
+                <h2 id="booking-title">Marcar triagem</h2><span class="small-muted">Horário de Brasília</span>
+            </div>
+            <div id="message" role="status" aria-live="polite" class="message hidden"></div>
+            <form id="booking-form"><label for="day">1. Data disponível</label><select id="day" required>
+                    <option value="">Carregando datas...</option>
+                </select><label for="hour">2. Horário disponível</label>
+                <div id="time-list" class="time-grid" aria-live="polite"><span class="muted">Selecione uma data para ver
+                        os horários.</span></div><input type="hidden" id="slot" required><label for="responsible">3.
+                    Nome completo do responsável</label><input id="responsible" required minlength="3" maxlength="120"
+                    autocomplete="name" placeholder="Nome completo do responsável"><label for="student">4. Nome completo
+                    do estudante</label><input id="student" required minlength="3" maxlength="120"
+                    placeholder="Nome completo do estudante"><button class="primary-button" type="submit"
+                    id="submit">Confirmar agendamento <span>→</span></button>
+                <p class="privacy">Seus dados serão usados apenas para organizar este atendimento. Não envie laudos ou
+                    informações médicas neste formulário.</p>
+            </form>
+            <div id="confirmation" class="confirmation hidden" aria-live="polite"></div>
+        </section>
+    </main>
+    <footer class="container footer"><span>Coordenação Regional de Ensino de Brazlândia · Unidade de Educação
+            Básica</span><span>Serviço de agendamentos</span></footer>
+    <script src="/static/public.js" defer></script>
+</body>
+
+</html>

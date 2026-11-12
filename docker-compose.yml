@@ -1,0 +1,11 @@
+services:
+  agendamento:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "127.0.0.1:8002:8000"
+    volumes:
+      - agendamento_data:/app/data
+volumes:
+  agendamento_data:
